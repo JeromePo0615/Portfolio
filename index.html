@@ -33,14 +33,14 @@
             z-index: -1;
         }
 
-        .video-container video {
+        .video-container iframe {
             position: absolute;
             top: 50%;
             left: 50%;
             width: 100vw;
             height: 100vh;
             transform: translate(-50%, -50%);
-            object-fit: cover;
+            pointer-events: none;
         }
 
         /* Header */
@@ -81,16 +81,89 @@
         nav ul li a:hover {
             color: #66b2ff;
         }
+
+        /* About Section */
+        section#about {
+            text-align: center;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        section#about img {
+            border-radius: 50%;
+            margin-top: 20px;
+            width: 150px;
+            border: 3px solid #cceeff;
+        }
+
+        /* Contact Section */
+        section#contact {
+            margin-top: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form input, form textarea, form button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #66b2ff;
+            color: #000;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #3388cc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        footer a {
+            color: #cceeff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #66b2ff;
+        }
+
+        footer p {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
 
     <!-- Video Background -->
     <div class="video-container">
-        <video autoplay muted loop>
-            <source src="https://drive.google.com/uc?export=download&id=1H3-WvKV02XwCK41jCPeZm6HYEVtW-ns9" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/OJAvgHSeIhI?autoplay=1&mute=1&loop=1&playlist=OJAvgHSeIhI&vq=hd1080" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
     </div>
 
     <!-- Header -->
